@@ -9,7 +9,7 @@ import (
 var DatabaseConnection = *dbConn()
 
 func dbConn() *sql.DB {
-	connSrt := "postgres://postgres:Qwerty1@localhost:32770/postgres?sslmode=disable"
+	connSrt := "postgres://postgres:<<PASSWORD>>@localhost:32770/postgres?sslmode=disable"
 	db, err := sql.Open("postgres", connSrt)
 	if err != nil {
 		log.Fatal("Error DB connection", err)
